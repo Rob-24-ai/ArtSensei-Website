@@ -17,19 +17,32 @@ Landing page for ArtSensei — structured art critique and feedback, anytime.
 - **Logo:** Enso/brush-circle "a" mark — used as favicon and in footer. Scroll-linked counter-clockwise rotation in hero. Note: current SVGs are raster-traced with baked-in grey backgrounds, need clean single-color vector versions
 - **Title:** "ArtSensei - You make the art. I help you see it."
 
-## TODO: Paper Tear Image (Photoshop)
+## TODO: Desktop / Photoshop Tasks
 
-The paper tear PNG (`OffWhitePaperEdgeSmooth.png`) has ~350-400px of blank off-white space below the torn edge. This creates too much dead space before the first content section. Needs to be cropped/reworked in Photoshop:
-- Crop bottom so there's only ~40-60px of off-white below the torn edge
-- Keep the gradient from paper texture to flat `#EBE7DB` but compress it into that shorter span
-- Watch for diagonal striations in the paper texture (top-right to bottom-left) — minimize their visibility
-
-## TODO: Logo SVGs
-
+### 1. Logo SVGs
 Current SVGs (`ArtSensei LOGO Vector Black.svg` / `White.svg`) are raster-traced with thousands of color classes and baked-in opaque backgrounds. Need clean versions:
 - Single-color paths on transparent background
 - One black version, one white version
 - Simple enough to render cleanly at small sizes (favicon, footer, hero spinner)
+
+### 2. Paper Tear Image
+The paper tear PNG (`OffWhitePaperEdgeSmooth.png`) has ~350-400px of blank off-white space below the torn edge. This creates too much dead space before the first content section:
+- Crop bottom so there's only ~40-60px of off-white below the torn edge
+- Keep the gradient from paper texture to flat `#EBE7DB` but compress it into that shorter span
+- Watch for diagonal striations in the paper texture (top-right to bottom-left) — minimize their visibility
+
+### 3. Marcel Phone Image
+`Marcel.jpg` — hand holding phone photographing a charcoal drawing. Currently has a pure white background. Needs background changed to off-white `#EBE7DB`:
+- Select/mask the wall background and fill with `#EBE7DB`
+- The drawing on the wall behind the phone should also shift to off-white
+- Keep the phone screen pure white — don't touch it
+- Clean edges around the hand and phone
+
+### 4. Art History Images (TBD)
+Curated art historical images that could be placed editorially on the page. Thinking about how to integrate without getting too busy. Purpose: show the kind of work ArtSensei can discuss, make the page visually richer, reinforce art-world credibility.
+
+### 5. In-Situ Scenario Shots (TBD)
+AI-generated images of ArtSensei being used in different scenarios (drawing, painting — not photography yet). Consider which if any belong on the landing page — keep it focused, don't overcrowd.
 
 ## Open Questions
 
