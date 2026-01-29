@@ -1,3 +1,15 @@
+// Swatch color picker
+document.querySelectorAll('.swatch').forEach(function(swatch) {
+    swatch.addEventListener('click', function() {
+        var color = this.getAttribute('data-color');
+        document.querySelector('.hero-statement em').style.color = color;
+        document.querySelectorAll('.swatch').forEach(function(s) {
+            s.style.outline = '2px solid transparent';
+        });
+        this.style.outline = '2px solid #fff';
+    });
+});
+
 // Scroll-linked logo spin
 (function() {
     const logo = document.getElementById('spin-logo');

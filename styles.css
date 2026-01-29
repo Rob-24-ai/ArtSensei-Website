@@ -145,14 +145,35 @@ a:hover {
     font-size: clamp(3rem, 7vw, 5.5rem);
     font-weight: 400;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 2rem;
     color: var(--color-text);
 }
 
 .hero-statement em {
     font-style: italic;
-    color: var(--color-accent);
+    color: #D4A84B;
+}
+
+.swatches {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 2rem;
+}
+
+.swatch {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.15s ease, outline 0.15s ease;
+    outline: 2px solid transparent;
+}
+
+.swatch:hover {
+    transform: scale(1.15);
+    outline: 2px solid #fff;
 }
 
 .hero-logo-spin {
