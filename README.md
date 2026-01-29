@@ -4,7 +4,7 @@ Landing page for ArtSensei — structured art critique and feedback, anytime.
 
 ## Current State
 
-- **Status:** Hero redesign in progress on `hero-design` branch
+- **Status:** Hero redesign in progress on `main` branch
 - **Live preview:** `python3 -m http.server 8000` from project root
 - **Hosting:** TBD (static site, no build step)
 
@@ -66,17 +66,3 @@ Images/
 fonts/              — local font files (Minion Pro, Styrene B)
 ```
 
-## File Structure
-
-```
-index.html          — single-page landing
-styles.css          — all styles, no preprocessor
-script.js           — form handling
-Images/
-  Marcel.jpg        — hero/promo photo (hand holding phone with art critique)
-  Logos/            — SVG logo marks (black + white versions)
-  OffWhite*.png/jpg — paper tear edge transition images
-  TornEdge*.png     — alternate torn edge assets
-  WhitePaperEdge.png
-fonts/              — local font files (Minion Pro, Styrene B)
-```
