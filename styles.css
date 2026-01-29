@@ -1,0 +1,431 @@
+/* Styrene B - Commercial Type */
+@font-face {
+    font-family: 'Styrene B';
+    src: url('fonts/WOFF2/StyreneB-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Styrene B';
+    src: url('fonts/WOFF2/StyreneB-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Styrene B';
+    src: url('fonts/WOFF2/StyreneB-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Styrene B';
+    src: url('fonts/WOFF2/StyreneB-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Minion Pro */
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('fonts/Minion/WOFF2/MinionPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('fonts/Minion/WOFF2/MinionPro-It.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('fonts/Minion/WOFF2/MinionPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Variables */
+:root {
+    --color-bg: #000000;
+    --color-text: #EBE7DB;
+    --color-text-muted: #EBE7DB;
+    --color-accent: #79a23b; /* rgb(121, 162, 59) - ArtSensei brand green */
+    --color-accent-hover: #8ab648;
+    --font-sans: 'Styrene B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-serif: 'Minion Pro', Georgia, 'Times New Roman', serif;
+    --container-width: 800px;
+    --spacing-section: 120px;
+}
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 60px;
+}
+
+.logo-image {
+    width: 120px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.01em;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-bg);
+}
+
+/* Paper Tear Divider */
+.paper-tear {
+    width: 100%;
+    line-height: 0;
+    margin-top: -30vw;
+    padding: 0;
+}
+
+.paper-tear img {
+    width: 100%;
+    display: block;
+}
+
+/* Content Sections (below the fold - light background) */
+section {
+    padding: var(--spacing-section) 24px;
+}
+
+.problem,
+.solution,
+.features,
+.audience {
+    background-color: #EBE7DB;
+    color: #1a1a1a;
+}
+
+.problem h2,
+.solution h2,
+.features h2,
+.audience h2 {
+    color: #1a1a1a;
+}
+
+.problem p,
+.audience p {
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 600px;
+}
+
+.problem p:last-child,
+.audience p:last-child {
+    color: #1a1a1a;
+    margin-bottom: 0;
+}
+
+.solution p {
+    color: #555;
+}
+
+/* How It Works */
+.how-it-works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-top: 3rem;
+}
+
+.step {
+    position: relative;
+}
+
+.step-number {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.step h3 {
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+}
+
+.step p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 64px;
+    margin-top: 3rem;
+}
+
+.feature h3 {
+    color: #1a1a1a;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Audience */
+.audience {
+    text-align: center;
+}
+
+.audience p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Waitlist Section */
+.waitlist {
+    text-align: center;
+    padding: var(--spacing-section) 24px;
+    border-top: 1px solid #222;
+}
+
+.waitlist h2 {
+    margin-bottom: 1rem;
+}
+
+.waitlist > .container > p:first-of-type {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+.waitlist-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.waitlist-form input[type="email"] {
+    width: 100%;
+    padding: 14px 16px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    background-color: #EBE7DB;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    color: #000000;
+    text-align: center;
+}
+
+.waitlist-form input[type="email"]::placeholder {
+    color: #999;
+}
+
+.waitlist-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.waitlist-form .cta-button {
+    width: 100%;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 48px 24px 64px;
+    border-top: 1px solid #222;
+}
+
+.grants {
+    margin-bottom: 2rem;
+}
+
+.grant-logo {
+    width: 180px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.grant-logo:hover {
+    opacity: 1;
+}
+
+.founder {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.founder a {
+    color: var(--color-text);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    :root {
+        --spacing-section: 80px;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .how-it-works {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
