@@ -1,2 +1,2 @@
-# ArtSensei-Website-
+# ArtSensei-Website
 ArtSensei Website Maintenance 
