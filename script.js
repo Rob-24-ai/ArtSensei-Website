@@ -1,3 +1,14 @@
+// Scroll-linked logo spin
+(function() {
+    const logo = document.getElementById('spin-logo');
+    if (!logo) return;
+
+    window.addEventListener('scroll', function() {
+        const deg = window.scrollY * -0.5;
+        logo.style.transform = 'rotate(' + deg + 'deg)';
+    }, { passive: true });
+})();
+
 // Waitlist forms - submit to Loops
 document.addEventListener('DOMContentLoaded', function() {
     const forms = document.querySelectorAll('.waitlist-form');
