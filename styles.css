@@ -255,7 +255,7 @@ section {
 }
 
 .example-shots {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
 }
@@ -310,7 +310,7 @@ section {
 .audience p {
     font-size: 1.15rem;
     color: #555;
-    max-width: 600px;
+    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -357,6 +357,15 @@ section {
     color: #555;
     margin-bottom: 0;
     text-align: left;
+}
+
+.privacy-note {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
 }
 
 /* Features Grid */
@@ -420,14 +429,15 @@ section {
 /* Waitlist Section */
 .waitlist {
     text-align: center;
-    padding: var(--spacing-section) 24px;
+    padding: 120px 24px var(--spacing-section);
     border-top: 1px solid #222;
 }
 
 .waitlist h2 {
     font-family: var(--font-serif);
     font-weight: 400;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    font-weight: 500;
     margin-bottom: 0.75rem;
 }
 
