@@ -66,7 +66,7 @@
     --font-sans: 'Styrene B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-serif: 'Minion Pro', Georgia, 'Times New Roman', serif;
     --container-width: 800px;
-    --spacing-section: 120px;
+    --spacing-section: 80px;
 }
 
 /* Reset */
@@ -106,7 +106,7 @@ h1, h2, h3 {
 
 h2 {
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 1.5rem;
 }
 
@@ -188,21 +188,31 @@ a:hover {
 /* CTA Button */
 .cta-button {
     display: inline-block;
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    padding: 14px 32px;
-    border-radius: 4px;
+    background: linear-gradient(160deg, #9A7E48, #5A4020, #9A7E48);
+    background-size: 300% 300%;
+    animation: cta-breathe 4s ease-in-out infinite alternate;
+    color: #EBE7DB;
+    padding: 22px 64px;
+    border-radius: 6px;
     font-family: var(--font-sans);
-    font-size: 0.95rem;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cta-button:hover {
-    background-color: var(--color-accent-hover);
-    color: var(--color-bg);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(138, 112, 64, 0.35);
+    color: #EBE7DB;
+}
+
+@keyframes cta-breathe {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
 }
 
 /* Paper Tear Divider */
@@ -244,8 +254,46 @@ section {
     display: inline-block;
 }
 
+.example-shots {
+    margin-top: 3rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.example-shots img {
+    width: 100%;
+    display: block;
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 97%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 97%, transparent);
+}
+
 .problem {
     padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.solution {
+    padding-top: 20px;
+}
+
+.problem blockquote {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 2rem auto 0;
+    padding: 0 24px;
+    border: none;
+    color: var(--color-accent);
+    text-align: center;
+}
+
+.problem blockquote cite {
+    display: block;
+    font-size: 0.75rem;
+    font-style: normal;
+    margin-top: 0.3rem;
+    color: #999;
+    text-align: center;
 }
 
 .problem h2,
@@ -253,13 +301,18 @@ section {
 .features h2,
 .audience h2 {
     color: #1a1a1a;
+    text-align: center;
 }
 
 .problem p,
+.solution p,
 .audience p {
     font-size: 1.15rem;
     color: #555;
     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .problem p:last-child,
@@ -327,9 +380,32 @@ section {
     text-align: center;
 }
 
+.audience h2 {
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    font-weight: 500;
+}
+
 .audience p {
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Filmstrip */
+.filmstrip {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: #EBE7DB;
+    line-height: 0;
+    justify-content: center;
+}
+
+.filmstrip img {
+    height: 100px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
 }
 
 /* Waitlist Section */
@@ -340,12 +416,17 @@ section {
 }
 
 .waitlist h2 {
-    margin-bottom: 1rem;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 0.75rem;
 }
 
 .waitlist > .container > p:first-of-type {
+    font-family: var(--font-serif);
     color: var(--color-text-muted);
-    margin-bottom: 2rem;
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
 }
 
 .waitlist-form {
@@ -353,15 +434,15 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    max-width: 320px;
+    max-width: 420px;
     margin: 0 auto;
 }
 
 .waitlist-form input[type="email"] {
     width: 100%;
-    padding: 14px 16px;
+    padding: 20px 24px;
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     background-color: #EBE7DB;
     border: 1px solid #d1d5db;
     border-radius: 6px;
@@ -383,9 +464,10 @@ section {
 }
 
 .form-note {
-    font-size: 0.8rem;
-    color: var(--color-text-muted);
-    margin-top: 1rem;
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1.5rem;
 }
 
 /* Footer */
@@ -418,17 +500,20 @@ footer {
 }
 
 .founder {
-    font-size: 0.9rem;
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: #666;
     margin-bottom: 0.5rem;
 }
 
 .founder a {
-    color: var(--color-text);
+    color: #666;
 }
 
 .copyright {
-    font-size: 0.8rem;
-    color: var(--color-text-muted);
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: #666;
     margin-bottom: 0;
 }
 
