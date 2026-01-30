@@ -315,6 +315,11 @@ section {
     text-align: center;
 }
 
+.problem .container,
+.solution .container {
+    overflow: visible;
+}
+
 .problem h2,
 .solution h2 {
     max-width: none;
