@@ -180,7 +180,7 @@ a:hover {
     width: 180px;
     height: 180px;
     position: relative;
-    top: 12rem;
+    top: 7rem;
     opacity: 1;
     will-change: transform;
 }
@@ -209,7 +209,7 @@ a:hover {
 .paper-tear {
     width: 100%;
     line-height: 0;
-    margin-top: -30vw;
+    margin-top: 0;
     padding: 0;
 }
 
@@ -229,6 +229,23 @@ section {
 .audience {
     background-color: #EBE7DB;
     color: #1a1a1a;
+}
+
+.marcel-image {
+    background-color: #EBE7DB;
+    text-align: center;
+    line-height: 0;
+    padding: 0 24px;
+}
+
+.marcel-image img {
+    max-width: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.problem {
+    padding-top: 40px;
 }
 
 .problem h2,
