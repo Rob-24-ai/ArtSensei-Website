@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/robcolvin/public_html/
-    - /bin/cp -R index.html styles.css script.js fonts Images "$DEPLOYPATH"
+    - /bin/cp -R index.html styles.css script.js fonts Images /home/robcolvin/public_html/
