@@ -12,27 +12,46 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
 
 // Scroll-linked logo spin
 (function() {
-    const logo = document.getElementById('spin-logo');
+    var logo = document.getElementById('spin-logo');
     if (!logo) return;
 
     window.addEventListener('scroll', function() {
-        const deg = window.scrollY * -0.5;
+        var deg = window.scrollY * -0.5;
         logo.style.transform = 'rotate(' + deg + 'deg)';
-    }, { passive: true });
+    }, false);
+})();
+
+// Scroll reveal - runs first to avoid hidden content
+(function() {
+    function revealOnScroll() {
+        var reveals = document.querySelectorAll('.reveal');
+        for (var i = 0; i < reveals.length; i++) {
+            var rect = reveals[i].getBoundingClientRect();
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            if (rect.top < windowHeight - 50) {
+                reveals[i].classList.add('visible');
+            }
+        }
+    }
+
+    window.addEventListener('scroll', revealOnScroll, false);
+    window.addEventListener('load', revealOnScroll, false);
+    document.addEventListener('DOMContentLoaded', revealOnScroll, false);
+    revealOnScroll();
 })();
 
 // Waitlist forms - submit to Loops
 document.addEventListener('DOMContentLoaded', function() {
-    const forms = document.querySelectorAll('.waitlist-form');
+    var forms = document.querySelectorAll('.waitlist-form');
 
     forms.forEach(function(form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const emailInput = form.querySelector('input[type="email"]');
-            const email = emailInput.value;
-            const button = form.querySelector('button');
-            const originalText = button.textContent;
+            var emailInput = form.querySelector('input[type="email"]');
+            var email = emailInput.value;
+            var button = form.querySelector('button');
+            var originalText = button.textContent;
 
             // Update button state
             button.textContent = 'Joining...';
@@ -46,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: 'newsletter-form-input=' + encodeURIComponent(email)
             })
-            .then(response => response.json())
-            .then(data => {
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
                 if (data.success) {
                     button.textContent = "Check your email!";
                     emailInput.value = '';
@@ -55,12 +74,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     button.textContent = 'Error - try again';
                 }
             })
-            .catch(error => {
+            .catch(function(error) {
                 console.error('Error:', error);
                 button.textContent = 'Error - try again';
             })
-            .finally(() => {
-                setTimeout(() => {
+            .finally(function() {
+                setTimeout(function() {
                     button.textContent = originalText;
                     button.disabled = false;
                 }, 3000);
@@ -68,14 +87,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

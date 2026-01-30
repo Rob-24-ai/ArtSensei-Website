@@ -408,7 +408,7 @@ section {
 }
 
 .audience h2 {
-    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    font-size: clamp(4.5rem, 10vw, 7rem);
     font-weight: 500;
     margin-bottom: 0.75rem;
 }
@@ -445,9 +445,8 @@ section {
 
 .waitlist h2 {
     font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 400;
-    font-size: clamp(3.5rem, 8vw, 5.5rem);
-    font-weight: 500;
     margin-bottom: 0.75rem;
 }
 
@@ -551,11 +550,20 @@ footer {
     opacity: 0;
     transform: translateY(70px);
     transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    animation: reveal-fallback 0s 2s forwards;
 }
 
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+    animation: none;
+}
+
+@keyframes reveal-fallback {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .mobile-break {
