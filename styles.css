@@ -315,16 +315,15 @@ section {
     text-align: center;
 }
 
-.problem .container,
-.solution .container {
-    overflow: visible;
-}
-
 .problem h2,
 .solution h2 {
-    max-width: none;
-    margin-left: -80px;
-    margin-right: -80px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% + 160px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .problem p,
