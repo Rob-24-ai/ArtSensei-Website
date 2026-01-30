@@ -317,13 +317,7 @@ section {
 
 .problem h2,
 .solution h2 {
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% + 160px);
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: clamp(3rem, 7vw, 5rem);
 }
 
 .problem p,
