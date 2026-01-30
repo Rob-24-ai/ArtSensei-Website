@@ -315,6 +315,15 @@ section {
     text-align: center;
 }
 
+.problem h2,
+.solution h2 {
+    max-width: none;
+    margin-left: -80px;
+    margin-right: -80px;
+}
+
+}
+
 .problem p,
 .solution p,
 .audience p {
