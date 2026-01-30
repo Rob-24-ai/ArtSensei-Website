@@ -6,7 +6,14 @@ Landing page for ArtSensei — structured art critique and feedback, anytime.
 
 - **Status:** Hero redesign in progress on `main` branch
 - **Live preview:** `python3 -m http.server 8000` from project root
-- **Hosting:** TBD (static site, no build step)
+- **Hosting:** Namecheap Stellar shared hosting (cPanel), expires May 7, 2026
+- **Domain:** `artsensei.ai` (registered and hosted at Namecheap)
+- **Namecheap username:** `robcolvin`
+- **cPanel access:** Namecheap dashboard → Hosting List → `artsensei.ai` → GO TO CPANEL
+- **Server:** `server164.web-hosting.com` (Shared IP: `68.65.122.44`)
+- **Home directory:** `/home/robcolvin`
+- **Public root:** `public_html/`
+- **Deployment:** Static site, no build step. Deploy via cPanel Git Version Control or File Manager. Git repo: `https://github.com/Rob-24-ai/ArtSensei-Website.git`
 
 ## Design Decisions
 
