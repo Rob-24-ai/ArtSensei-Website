@@ -356,6 +356,7 @@ section {
     font-size: 0.95rem;
     color: #555;
     margin-bottom: 0;
+    text-align: left;
 }
 
 /* Features Grid */
@@ -379,8 +380,8 @@ section {
 /* Audience */
 .audience {
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .audience p {
