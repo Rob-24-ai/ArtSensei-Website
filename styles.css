@@ -152,7 +152,17 @@ a:hover {
 
 .hero-statement em {
     font-style: italic;
-    color: #D4A84B;
+    background: linear-gradient(90deg, #E8B830, #D4882A, #C96B30, #D4A030, #E8B830);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: see-shift 6s ease-in-out infinite alternate;
+}
+
+@keyframes see-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 .swatches {
@@ -188,9 +198,9 @@ a:hover {
 /* CTA Button */
 .cta-button {
     display: inline-block;
-    background: linear-gradient(160deg, #9A7E48, #5A4020, #9A7E48);
-    background-size: 300% 300%;
-    animation: cta-breathe 4s ease-in-out infinite alternate;
+    background: linear-gradient(160deg, #9A7E48, #7A6A3A, #6B7045, #8A7050, #9A6B4A, #8B6055, #9A7E48);
+    background-size: 600% 600%;
+    animation: cta-breathe 12s ease-in-out infinite alternate;
     color: #EBE7DB;
     padding: 22px 64px;
     border-radius: 6px;
@@ -536,6 +546,18 @@ footer {
     margin-bottom: 0;
 }
 
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(70px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .mobile-break {
     display: none;
 }
@@ -583,6 +605,10 @@ footer {
     .for-now {
         font-size: 0.7em;
         font-weight: 400;
+    }
+
+    .form-note {
+        font-size: 1rem;
     }
 }
 

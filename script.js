@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    button.textContent = "You're on the list";
+                    button.textContent = "Check your email!";
                     emailInput.value = '';
                 } else {
                     button.textContent = 'Error - try again';
@@ -68,3 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
