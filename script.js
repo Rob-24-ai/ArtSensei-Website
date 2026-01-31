@@ -146,6 +146,30 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
 })();
 
+
+// Testimonial fade-out based on scroll through wrapper
+(function() {
+    var testi = document.getElementById('testi-sticky');
+    var wrap = document.getElementById('testi-audience-wrap');
+    if (!testi || !wrap) return;
+
+    window.addEventListener('scroll', function() {
+        var wrapRect = wrap.getBoundingClientRect();
+        var wrapHeight = wrap.offsetHeight;
+        var scrolled = -wrapRect.top;
+        // Testimonial is visible for first 40% of wrapper scroll, then fades over next 20%
+        var fadeStart = wrapHeight * 0.2;
+        var fadeEnd = wrapHeight * 0.35;
+        if (scrolled < fadeStart) {
+            testi.style.opacity = 1;
+        } else if (scrolled > fadeEnd) {
+            testi.style.opacity = 0;
+        } else {
+            testi.style.opacity = 1 - (scrolled - fadeStart) / (fadeEnd - fadeStart);
+        }
+    }, {passive: true});
+})();
+
 // "Yeah, it's free" color transition at halfway up viewport
 (function() {
     var heading = document.querySelector('.audience h2');
@@ -155,7 +179,7 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
     window.addEventListener('scroll', function() {
         if (!triggered) {
             var rect = heading.getBoundingClientRect();
-            var quarter = window.innerHeight * 0.75;
+            var quarter = window.innerHeight * 0.5;
             if (rect.top < quarter) {
                 heading.classList.add('color-active');
                 triggered = true;

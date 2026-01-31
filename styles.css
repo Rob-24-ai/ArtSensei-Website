@@ -473,6 +473,7 @@ section {
     animation: see-shift 3s ease-in-out infinite alternate;
 }
 
+
 .step-col h3 {
     font-family: var(--font-serif);
     font-size: 1.6rem;
@@ -558,6 +559,59 @@ section.solution {
 }
 
 
+/* Testimonial → Audience scroll-swap */
+.testi-audience-wrap {
+    position: relative;
+    background-color: #EBE7DB;
+    margin-top: -1px;
+}
+
+.testi-sticky {
+    position: sticky;
+    top: 70px;
+    z-index: 3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: calc(18vh + 24px) 24px 48px;
+    background-color: #EBE7DB;
+}
+
+.testi-sticky blockquote {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-style: italic;
+    color: #2a2a2a;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    border: none;
+    line-height: 1.45;
+}
+
+.testi-sticky blockquote em {
+    font-style: italic;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.testi-sticky blockquote cite {
+    display: block;
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: #666;
+    margin-top: 1.25rem;
+}
+
+.testi-audience-wrap .audience {
+    position: relative;
+    z-index: 2;
+    background-color: #EBE7DB;
+}
+
 /* Features Grid */
 .features-grid {
     display: grid;
@@ -579,14 +633,16 @@ section.solution {
 /* Audience */
 .audience {
     text-align: center;
-    padding-top: 120px;
-    padding-bottom: 40vh;
+    padding-top: 40vh;
+    padding-bottom: 140px;
 }
 
 .audience p {
-    color: #3a3a3a;
+    color: #2a2a2a;
     font-family: var(--font-serif);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    line-height: 1.5;
 }
 
 .audience h2 {
@@ -907,7 +963,7 @@ footer {
 
     .audience {
         padding-top: 80px;
-        padding-bottom: 30vh;
+        padding-bottom: 36px;
     }
 
     .audience {
