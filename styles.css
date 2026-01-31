@@ -870,6 +870,10 @@ footer {
         height: 110px;
     }
 
+    .filmstrip-michelangelo {
+        order: 99;
+    }
+
     .mobile-break {
         display: block;
     }
