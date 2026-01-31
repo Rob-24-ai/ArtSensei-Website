@@ -214,9 +214,9 @@ a:hover {
 /* CTA Button */
 .cta-button {
     display: inline-block;
-    background: linear-gradient(160deg, #9A7E48, #7A6A3A, #6B7045, #8A7050, #9A6B4A, #8B6055, #9A7E48);
-    background-size: 600% 600%;
-    animation: cta-breathe 12s ease-in-out infinite alternate;
+    background: linear-gradient(90deg, #A8862A, #946020, #8A4E25, #5A7A2B, #967228, #A8862A);
+    background-size: 600% 100%;
+    animation: see-shift 3s ease-in-out infinite alternate;
     color: #EBE7DB;
     padding: 22px 64px;
     border-radius: 6px;
@@ -439,6 +439,12 @@ section.solution {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 500;
     margin-bottom: 0.75rem;
+    background: linear-gradient(90deg, #E8B830, #D4882A, #C96B30, #79a23b, #D4A030, #E8B830);
+    background-size: 600% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: see-shift 3s ease-in-out infinite alternate;
 }
 
 .audience p {
