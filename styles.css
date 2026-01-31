@@ -265,7 +265,7 @@ section {
 }
 
 .example-shots {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
 }
@@ -273,8 +273,8 @@ section {
 .example-shots img {
     width: 100%;
     display: block;
-    mask-image: linear-gradient(to bottom, transparent, black 15%, black 97%, transparent);
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 97%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black);
 }
 
 .problem {
@@ -282,9 +282,8 @@ section {
     padding-bottom: 20px;
 }
 
-.solution {
-    padding-top: 20px;
-    padding-bottom: 20px;
+section.solution {
+    padding-bottom: 0;
 }
 
 .problem blockquote {
@@ -317,7 +316,6 @@ section {
 
 .problem h2,
 .solution h2 {
-    font-size: clamp(3rem, 7vw, 5rem);
 }
 
 .problem p,
@@ -334,7 +332,6 @@ section {
 
 .problem p:last-child,
 .audience p:last-child {
-    color: #1a1a1a;
     margin-bottom: 0;
 }
 
@@ -405,16 +402,18 @@ section {
 /* Audience */
 .audience {
     text-align: center;
-    padding-top: 80px;
+    padding-top: 140px;
     padding-bottom: 120px;
 }
 
 .audience p {
     color: #3a3a3a;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
 }
 
 .audience h2 {
-    font-size: clamp(4.5rem, 10vw, 7rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 500;
     margin-bottom: 0.75rem;
 }
