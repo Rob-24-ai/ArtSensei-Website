@@ -53,6 +53,41 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
     }, {passive: true});
 })();
 
+// Scroll-illuminating steps (1-2-3)
+(function() {
+    var wrap = document.querySelector('.steps-sticky-wrap');
+    if (!wrap) return;
+
+    var cols = wrap.querySelectorAll('.step-col');
+    var current = 0;
+    var total = cols.length;
+    var ticking = false;
+
+    function setStep(index) {
+        if (index === current) return;
+        for (var i = 0; i < total; i++) {
+            cols[i].classList.remove('step-col-active');
+        }
+        cols[index].classList.add('step-col-active');
+        current = index;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                var rect = wrap.getBoundingClientRect();
+                var wrapHeight = wrap.offsetHeight;
+                var scrolled = -rect.top;
+                var progress = Math.max(0, Math.min(1, scrolled / (wrapHeight - window.innerHeight)));
+                var step = Math.min(total - 1, Math.floor(progress * total));
+                setStep(step);
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, {passive: true});
+})();
+
 // Filmstrip scroll-linked carousel
 (function() {
     var strip = document.getElementById('filmstrip');
