@@ -360,7 +360,7 @@ section.solution {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 48px;
-    margin-top: 5rem;
+    margin-top: 3.5rem;
 }
 
 .step {
@@ -370,10 +370,17 @@ section.solution {
 .step-number {
     display: block;
     font-family: var(--font-serif);
-    font-size: 3rem;
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-    line-height: 1;
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    padding: 0.1em 0;
+    background: linear-gradient(90deg, #E8B830, #D4882A, #C96B30, #79a23b, #D4A030, #E8B830);
+    background-size: 600% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: see-shift 3s ease-in-out infinite alternate;
 }
 
 .step h3 {
