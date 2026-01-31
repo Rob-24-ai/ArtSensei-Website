@@ -140,6 +140,22 @@ a:hover {
     text-align: center;
 }
 
+.grant-badge {
+    text-align: center;
+    padding: 12px 0 0;
+    background: #000;
+}
+
+.grant-badge-logo {
+    height: 18px;
+    filter: brightness(0) invert(1);
+    opacity: 0.5;
+}
+
+.grant-badge a:hover .grant-badge-logo {
+    opacity: 0.8;
+}
+
 .hero-statement {
     font-family: var(--font-serif);
     font-size: clamp(2.2rem, 7vw, 5.5rem);
