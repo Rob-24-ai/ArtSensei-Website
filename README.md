@@ -155,6 +155,76 @@ Copy this and hand it to another LLM to generate the alt text and meta tags:
 >
 > Format the alt text as a simple list I can copy-paste, and the meta tags as a code block.
 
+## Related Repos
+
+- **Marcel Learning System (taxonomy browser + knowledge base):** https://github.com/Rob-24-ai/Marcel-Learning-System.git
+  - Local path: `/Users/robcolvin/ArtSensei/Marcel-Learning-System-master`
+  - Taxonomy data: `ui/data/taxonomy-data.json`
+  - Artist-analyzed examples with animated GIFs live in `knowledge-base/mediums/painting/application/`
+
+## Image Resize Scripts
+
+### Resize filmstrip GIFs for the website
+
+Used to take full-size animated GIFs from the Marcel knowledge base (typically 1200px wide, ~2MB) and resize them to 350px height for the filmstrip. Run from any directory:
+
+```python
+python3 -c "
+from PIL import Image
+import os
+
+# Set these per image
+input_path = '/path/to/source.gif'
+output_path = '/Users/robcolvin/artsensei/Website-Maintenance/Images/filmstrip/XX-name.gif'
+target_h = 350
+
+img = Image.open(input_path)
+frames = []
+durations = []
+try:
+    while True:
+        frame = img.copy().convert('RGBA')
+        w, h = frame.size
+        new_h = target_h
+        new_w = int(w * (new_h / h))
+        frame = frame.resize((new_w, new_h), Image.LANCZOS)
+        frames.append(frame)
+        durations.append(img.info.get('duration', 100))
+        img.seek(img.tell() + 1)
+except EOFError:
+    pass
+
+frames[0].save(output_path, save_all=True, append_images=frames[1:],
+               duration=durations, loop=0, optimize=True, disposal=2)
+print(f'{len(frames)} frames, {os.path.getsize(output_path) / 1024:.0f}KB')
+"
+```
+
+For static JPGs:
+
+```python
+python3 -c "
+from PIL import Image
+import os
+
+input_path = '/path/to/source.jpg'
+output_path = '/Users/robcolvin/artsensei/Website-Maintenance/Images/filmstrip/XX-name.jpg'
+target_h = 350
+
+img = Image.open(input_path)
+w, h = img.size
+new_w = int(w * (target_h / h))
+img = img.resize((new_w, target_h), Image.LANCZOS)
+img.save(output_path, 'JPEG', quality=85)
+print(f'{new_w}x{target_h}, {os.path.getsize(output_path) / 1024:.0f}KB')
+"
+```
+
+### Notes
+- Target 350px height = 2x retina for the 175px display size on desktop
+- For B&W images (Kollwitz woodcuts etc), you can add `.quantize(colors=64, method=2)` before saving to reduce file size further
+- The Marcel image-maker (`Marcel-Learning-System-master/image-maker/`) has its own `create_gif.py` for creating the source GIFs from numbered frames — see the Marcel repo's CLAUDE.md for that workflow
+
 ## File Structure
 
 ```
