@@ -113,6 +113,48 @@ Design review of the live site at artsensei.ai.
 - Mobile: should "Yeah, it's free" body text stay serif or switch to Styrene on mobile?
 - Mobile: finalize left-align vs centered approach for all sections
 
+## Next Session TODO
+
+1. **1-2-3 Steps section** — brainstorm better visual treatment (steps feel small/floating on desktop)
+2. **Social proof** — add user quotes (Rob has some saved)
+3. **Alt text + OG tags** — use the prompt below
+4. **Waitlist follow-up language** — smooth out "Try It Free" → waitlist expectation in email flow
+
+## Prompt: Alt Text + OG Meta Tags
+
+Copy this and hand it to another LLM to generate the alt text and meta tags:
+
+> I have a landing page for ArtSensei (artsensei.ai), an AI art critique tool built by artists from SAIC, Yale, NYU, NYAA, RISD, and MICA. I need two things:
+>
+> **1. Alt text for these images:**
+> - `off-white-paper-tear-thin.jpg` — a torn paper edge divider between sections, off-white paper texture against a black background
+> - `ExampleShotsRow.jpg` — a photo of 4 iPhones held in hands, each showing the ArtSensei app analyzing different artworks (figure drawings and art history references from Hokusai and Cassatt)
+> - `01-corot.jpg` — a Corot landscape painting showing natural framing with trees
+> - `02-rubens.gif` — animated analysis of a Rubens painting
+> - `03-kollwitz-proletariat.gif` — animated analysis of Käthe Kollwitz's "Proletariat: Out of Work" woodcut, black and white
+> - `04-vermeer-glazing.gif` — animated GIF alternating between Vermeer's "The Milkmaid" full painting and a detail of the glazing technique on the woman's dress
+> - `05-klimt.gif` — animated analysis of a Klimt painting
+> - `06-af-klint.jpg` — Hilma af Klint's "The Swan" abstract painting
+> - `07-gonzales.jpg` — Eva Gonzalès painting "Nanny and Child"
+> - `08-moronobu.gif` — animated analysis of a Moronobu Japanese woodblock print
+> - `09-michelangelo.gif` — animated analysis of a Michelangelo drawing
+> - `10-rembrandt.gif` — animated analysis of a Rembrandt work
+> - `11-durer.gif` — animated analysis of an Albrecht Dürer work
+> - `12-kollwitz.gif` — animated analysis of a Käthe Kollwitz work
+> - `13-degas.gif` — animated analysis of a Degas work
+> - `14-mondrian.jpg` — a Piet Mondrian painting
+> - `15-goya.gif` — animated analysis of a Goya work
+>
+> Write concise, descriptive alt text for each (1-2 sentences). Focus on what the image shows, not what it means. For the animated GIFs, mention that they alternate between views.
+>
+> **2. Open Graph and Twitter meta tags for the page:**
+> - Title: "ArtSensei — You make the art. We help you see it."
+> - Description: "Get substantive, art-historically grounded feedback on your paintings and drawings. Like having a knowledgeable studio visitor available anytime."
+> - URL: https://artsensei.ai
+> - I need a recommended OG image size and what to use (I have the logo SVG and phone screenshots). Give me the full HTML meta tags to paste into the `<head>`.
+>
+> Format the alt text as a simple list I can copy-paste, and the meta tags as a code block.
+
 ## File Structure
 
 ```
