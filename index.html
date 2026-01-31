@@ -6,10 +6,18 @@
     <title>ArtSensei - You make the art. I help you see it.</title>
     <meta name="description" content="Get substantive, art-historically grounded feedback on your paintings and drawings. Like having a knowledgeable studio visitor available anytime.">
     <link rel="icon" type="image/svg+xml" href="Images/Logos/SVG/LOGO White A.svg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=6">
     <style>body{opacity:0}body.loaded{opacity:1;transition:opacity .3s}</style>
 </head>
 <body onload="document.body.classList.add('loaded')">
+    <!-- Sticky Header (appears after fold) -->
+    <header class="sticky-header" id="sticky-header">
+        <div class="sticky-header-inner">
+            <img src="Images/Logos/SVG/LOGO Black A.svg" alt="ArtSensei" class="sticky-logo">
+            <a href="#waitlist" class="cta-button cta-button-sm">Try It Free</a>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -26,9 +34,9 @@
     <!-- Problem Section -->
     <section class="problem">
         <div class="container reveal">
-            <h2>You know the problem</h2>
+            <h2>You know the need</h2>
             <p>
-                You make work. You want real feedback—not "nice colors!" But thoughtful critique is hard to find. Maybe art school's behind you. Maybe you never went. Your community is thin and most people don't know how to really&nbsp;look&nbsp;at&nbsp;visual&nbsp;art.
+                You make work. You want real feedback—not "nice colors!" But thoughtful critique is hard to find. Maybe art school's behind you. Maybe you never went. Your community is thin and most people don't know how to really&nbsp;talk&nbsp;about&nbsp;visual&nbsp;art.
             </p>
         </div>
         <!-- <blockquote class="reveal">
@@ -47,7 +55,27 @@
             <p>
                 Ask it anything: troubleshoot a painting, rethink a composition, and get unstuck. It remembers you, your tastes, and keeps you moving forward.
             </p>
-            <div class="how-it-works reveal">
+        </div>
+    </section>
+
+    <!-- Example Shots — dark band -->
+    <div class="example-shots-band">
+        <img src="Images/ExampleShotsRow.jpg" alt="ArtSensei in action: upload your drawing, see art history references from Hokusai and Cassatt" id="shots-img" loading="lazy">
+    </div>
+
+    <!-- Mobile lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <div class="lightbox-inner">
+            <img src="" alt="" id="lightbox-img">
+            <p class="lightbox-caption">Need a visual? ArtSensei pulls from art history for you.</p>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="container reveal">
+            <div class="how-it-works">
                 <div class="step">
                     <span class="step-number">1</span>
                     <h3>Show your work</h3>
@@ -56,48 +84,47 @@
                 <div class="step">
                     <span class="step-number">2</span>
                     <h3>Get thoughtful critique</h3>
-                    <p>Real feedback with image references from great artists.</p>
+                    <p>Real feedback with image references from historic artists.</p>
                 </div>
                 <div class="step">
                     <span class="step-number">3</span>
                     <h3>Talk it through</h3>
-                    <p>Ask follow-ups. Push back. It's a conversation, not a report.</p>
+                    <p>Ask for more. Push back. It's a conversation, not a report.</p>
                 </div>
             </div>
             <p class="privacy-note"><em>Your images are private and never used for training.</em></p>
-        </div>
-        <div class="example-shots">
-            <img src="Images/CutCanvasRagged.jpg" alt="ArtSensei in action: real drawings with art history references">
         </div>
     </section>
 
     <!-- Who It's For Section -->
     <section class="audience">
         <div class="container">
-            <h2>Yeah, it's free.</h2>
+            <h2 data-text="Yeah, it's free.">Yeah, it's free.</h2>
             <p>
-                ArtSensei is new, and free for now. You use it. Tell us what's working and what isn't. Help&nbsp;us&nbsp;get&nbsp;this&nbsp;right.
+                ArtSensei is new, and free for now. Use it. Tell us what's helpful and what isn't. Help&nbsp;us&nbsp;get&nbsp;it&nbsp;right.
             </p>
         </div>
     </section>
 
     <!-- Filmstrip -->
-    <div class="filmstrip">
-        <img src="Images/filmstrip/01-vermeer.gif" alt="Vermeer">
-        <img src="Images/filmstrip/02-rubens.gif" alt="Rubens">
-        <img src="Images/filmstrip/03-morisot.jpg" alt="Morisot">
-        <img src="Images/filmstrip/04-turner.jpg" alt="Turner">
-        <img src="Images/filmstrip/05-klimt.gif" alt="Klimt">
-        <img src="Images/filmstrip/06-af-klint.jpg" alt="Hilma af Klint">
-        <img src="Images/filmstrip/07-gonzales.jpg" alt="Gonzales">
-        <img src="Images/filmstrip/08-moronobu.gif" alt="Moronobu">
-        <img src="Images/filmstrip/09-michelangelo.gif" alt="Michelangelo">
-        <img src="Images/filmstrip/10-rembrandt.gif" alt="Rembrandt">
-        <img src="Images/filmstrip/11-durer.gif" alt="Dürer">
-        <img src="Images/filmstrip/12-kollwitz.gif" alt="Kollwitz">
-        <img src="Images/filmstrip/13-degas.gif" alt="Degas">
-        <img src="Images/filmstrip/14-mondrian.jpg" alt="Mondrian">
-        <img src="Images/filmstrip/15-goya.gif" alt="Goya">
+    <div class="filmstrip" id="filmstrip">
+        <div class="filmstrip-track" id="filmstrip-track">
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/01-corot.jpg" alt="Corot"><figcaption>Corot</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/02-rubens.gif" alt="Rubens"><figcaption>Rubens</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/03-kollwitz-proletariat.gif" alt="Kollwitz"><figcaption>Kollwitz</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/04-vermeer-glazing.gif" alt="Vermeer"><figcaption>Vermeer</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/05-klimt.gif" alt="Klimt"><figcaption>Klimt</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/06-af-klint.jpg" alt="Hilma af Klint"><figcaption>af Klint</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/07-gonzales.jpg" alt="Gonzales"><figcaption>Gonzales</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/08-moronobu.gif" alt="Moronobu"><figcaption>Moronobu</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/09-michelangelo.gif" alt="Michelangelo"><figcaption>Michelangelo</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/10-rembrandt.gif" alt="Rembrandt"><figcaption>Rembrandt</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/11-durer.gif" alt="Dürer"><figcaption>Dürer</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/12-kollwitz.gif" alt="Kollwitz"><figcaption>Kollwitz</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/13-degas.gif" alt="Degas"><figcaption>Degas</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/14-mondrian.jpg" alt="Mondrian"><figcaption>Mondrian</figcaption></figure>
+            <figure class="filmstrip-item"><img loading="lazy" src="Images/filmstrip/15-goya.gif" alt="Goya"><figcaption>Goya</figcaption></figure>
+        </div>
     </div>
 
     <!-- Waitlist Section -->

@@ -51,12 +51,67 @@ Curated art historical images that could be placed editorially on the page. Thin
 ### 5. In-Situ Scenario Shots (TBD)
 AI-generated images of ArtSensei being used in different scenarios (drawing, painting — not photography yet). Consider which if any belong on the landing page — keep it focused, don't overcrowd.
 
+## Website Review Checklist (Jan 31, 2026)
+
+Design review of the live site at artsensei.ai.
+
+### CTA & Conversion
+- [ ] Add a CTA button ("Let's Go" or similar) higher on the page — visible without scrolling
+- [ ] Consider a sticky header/nav with persistent CTA so it's always accessible
+- [ ] Review email signup form placement — currently buried at the bottom
+
+### Visual Hierarchy & Typography
+- [x] Bumped h2 headers to `clamp(2.8rem, 6vw, 5rem)` — scannable at a glance
+- [x] Body text weight bumped from 300 to 400, color darkened from `#555` to `#3a3a3a`
+- [x] "You know the problem" → "You know the need" (cleaner call-and-response with "Eyes trained for you")
+- [ ] Verify consistent sizing/weight across all section headers
+
+### Spacing & Rhythm
+- [x] Tightened vertical spacing between sections — connected flow
+- [x] Removed bottom canvas tear divider — torn paper used only once at hero transition
+- [x] Added museum-proportioned dark mat (`#1a1a1a`) for ExampleShotsRow phone image
+- [x] Mat uses `vw`-based padding with slight bottom weighting (museum standard)
+- [x] Tuned gap between "Eyes trained" copy → mat → 1-2-3 steps for connected sequence
+
+### Page Structure (Restructured)
+- [x] Moved ExampleShotsRow.jpg directly after "Eyes trained for you" copy
+- [x] 1-2-3 steps now sit below the phone image (tell → show → explain flow)
+- [x] Swapped `CutCanvasRagged.jpg` for clean `ExampleShotsRow.jpg`
+
+### Mobile (In Progress)
+- [x] Reduced section spacing from 80px to 48px
+- [x] Left-aligned body text and headers for problem/solution sections
+- [x] Left-aligned "Yeah, it's free" section with bumped header size
+- [x] Tighter step gaps (16px), smaller step numbers
+- [x] Tighter mat padding on mobile (20px)
+- [ ] Continue refining mobile typography and spacing
+- [ ] Test full mobile flow end-to-end
+
+### Color System
+- [ ] Lock in a purposeful accent color palette (currently ochre `#D4A84B` and olive `#79A23B`)
+- [ ] Make sure chart/accent colors carry through consistently if adding more visual elements
+
+### Performance
+- [ ] Optimize image file sizes (paper textures, filmstrip, screenshots) — compress or convert to WebP
+- [ ] Implement lazy loading on below-the-fold images
+- [ ] Check for flash of unstyled content from body opacity transition
+
+### Accessibility
+- [ ] Add descriptive `alt` text to all images (artist filmstrip, screenshots, paper tear)
+- [x] Improved color contrast on body text (`#3a3a3a` on `#EBE7DB`)
+- [ ] Verify full WCAG AA compliance
+- [ ] Test keyboard navigation and screen reader flow
+
+### Footer & Misc
+- [ ] Consider moving ElevenLabs grant mention to a separate About/Partners page to keep footer focused
+- [ ] Evaluate whether `rob@artsensei.ai` contact should become a contact form as user base grows
+
 ## Open Questions
 
 - Accent color: ochre `#D4A84B` is current pick, explored greens, ambers, peach, terracotta — revisit if needed
 - Form placement and styling (removed from hero during redesign, still exists at bottom of page)
-- Copy refinements for below-the-fold sections
-- Section spacing and rhythm below the fold
+- Mobile: should "Yeah, it's free" body text stay serif or switch to Styrene on mobile?
+- Mobile: finalize left-align vs centered approach for all sections
 
 ## File Structure
 
