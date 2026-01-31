@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: 'newsletter-form-input=' + encodeURIComponent(email)
+                body: 'email=' + encodeURIComponent(email)
             })
             .then(function(response) { return response.json(); })
             .then(function(data) {
