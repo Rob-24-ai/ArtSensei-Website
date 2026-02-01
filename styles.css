@@ -463,7 +463,8 @@ section {
     font-family: var(--font-serif);
     font-size: 6rem;
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.15;
+    display: inline-block;
     margin: 0 0 0.3rem;
     background: linear-gradient(90deg, #E8B830, #D4882A, #C96B30, #79a23b, #D4A030, #E8B830);
     background-size: 600% 100%;
@@ -892,10 +893,14 @@ footer {
         height: 180vh;
     }
 
+    .steps-sticky {
+        padding-bottom: 24px;
+    }
+
     .steps-row {
         display: block;
         position: relative;
-        min-height: 220px;
+        min-height: 300px;
     }
 
     .step-col {
@@ -917,6 +922,7 @@ footer {
 
     .step-col .step-number {
         font-size: 5rem;
+        padding-bottom: 0.1em;
     }
 
     .step-col h3 {
@@ -967,13 +973,21 @@ footer {
         padding-bottom: 48px;
     }
 
-    .audience {
-        padding-top: 80px;
+    .testi-sticky {
+        padding: 48px 24px 36px;
+    }
+
+    .testi-audience-wrap .audience {
+        padding-top: 60vh;
         padding-bottom: 36px;
     }
 
     .audience {
         text-align: left;
+    }
+
+    .filmstrip-fade {
+        height: 100px;
     }
 
     .audience h2 {
