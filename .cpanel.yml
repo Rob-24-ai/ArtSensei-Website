@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/cp -R index.html styles.css script.js fonts Images /home/robcolvin/public_html/
+    - /bin/cp -R index.html styles.css script.js fonts Images robots.txt sitemap.xml llms.txt /home/robcolvin/public_html/

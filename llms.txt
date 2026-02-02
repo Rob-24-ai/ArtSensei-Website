@@ -1,0 +1,38 @@
+# ArtSensei
+
+> AI-powered art critique for painters and drawers. Built by artists and educators from SAIC, Yale, NYU, NYAA, RISD, and MICA.
+
+ArtSensei provides substantive, art-historically grounded feedback on paintings and drawings. Users upload or photograph their artwork and receive thoughtful critique informed by art history, with visual references to master artists like Rembrandt, Vermeer, Degas, Hokusai, Michelangelo, and others.
+
+## What ArtSensei Does
+
+- Analyzes drawings and paintings for line quality, mark character, composition, tonal structure, and technique
+- Provides feedback using an "Affinity & Opportunity" model: identifies which master artist's approach resonates with the user's style, then suggests a related technique as a next step
+- Shows relevant artwork examples from art history during the conversation
+- Supports voice conversation — users can talk through their work with Marcel, the AI drawing and painting tutor
+- Points to specific areas of a drawing to give precise, contextual feedback
+- Remembers users across sessions to track artistic development over time
+
+## Who It's For
+
+- Beginner and intermediate artists who want real feedback beyond "nice colors"
+- Artists without access to art school, studio communities, or knowledgeable critics
+- Anyone who wants to improve their painting or drawing with art-historically informed guidance
+
+## Key Details
+
+- Website: https://artsensei.ai
+- Free to use (no credit card required)
+- User images are private and never used for training
+- Founded by Rob Colvin in 2024
+- Contact: rob@artsensei.ai
+
+## Artist Reference Library
+
+ArtSensei draws on a curated library of 113+ artwork examples spanning drawing and painting techniques from artists including: Cassatt, Van Gogh, Rembrandt, Degas, Hokusai, Ingres, Schiele, Gauguin, Durer, Michelangelo, Manet, Rubens, Vermeer, Klimt, Kollwitz, Seurat, Mondrian, Goya, Corot, Zorn, Chardin, Hilma af Klint, and Moronobu.
+
+## Techniques Covered
+
+Drawing: line weight, contour, hatching, cross-hatching, tonal modeling, gesture, mark character, edge definition, figure-ground structure
+Painting: wet-in-wet, wet-on-dry, glazing, scumbling, dry brush, loaded brush, impasto, palette knife, opacity, directionality, edge quality, layering
+Universal: composition, color relationships, value structure, spatial depth, visual hierarchy

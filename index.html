@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArtSensei - You make the art. I help you see it.</title>
     <meta name="description" content="Get substantive, art-historically grounded feedback on your paintings and drawings. Like having a knowledgeable studio visitor available anytime.">
+    <link rel="canonical" href="https://artsensei.ai/">
+    <meta name="theme-color" content="#000000">
+    <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://artsensei.ai">
+    <meta property="og:url" content="https://artsensei.ai/">
     <meta property="og:title" content="ArtSensei — You make the art. We help you see it.">
     <meta property="og:description" content="Get substantive, art-historically grounded feedback on your paintings and drawings. Like having a knowledgeable studio visitor available anytime.">
     <meta property="og:image" content="https://artsensei.ai/Images/ExampleShotsRow.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="ArtSensei">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -22,16 +29,111 @@
     <link rel="icon" type="image/svg+xml" href="Images/Logos/SVG/LOGO White A.svg">
     <link rel="stylesheet" href="styles.css?v=9">
     <style>body{opacity:0}body.loaded{opacity:1;transition:opacity .3s}</style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://artsensei.ai/#organization",
+          "name": "ArtSensei Inc.",
+          "url": "https://artsensei.ai",
+          "logo": "https://artsensei.ai/Images/Logos/SVG/LOGO Black A.svg",
+          "email": "rob@artsensei.ai",
+          "founder": {
+            "@type": "Person",
+            "name": "Rob Colvin"
+          },
+          "foundingDate": "2024",
+          "description": "AI-powered art critique built by artists and educators from SAIC, Yale, NYU, NYAA, RISD, and MICA."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://artsensei.ai/#application",
+          "name": "ArtSensei",
+          "url": "https://artsensei.ai",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "description": "Get substantive, art-historically grounded feedback on your paintings and drawings. Upload your artwork and receive thoughtful critique with references to master artists like Rembrandt, Vermeer, Degas, and Hokusai.",
+          "creator": {
+            "@id": "https://artsensei.ai/#organization"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://artsensei.ai/#website",
+          "url": "https://artsensei.ai",
+          "name": "ArtSensei",
+          "publisher": {
+            "@id": "https://artsensei.ai/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is ArtSensei?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ArtSensei is an AI-powered art critique tool that provides substantive, art-historically grounded feedback on paintings and drawings. It's built by artists and educators from SAIC, Yale, NYU, NYAA, RISD, and MICA."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does ArtSensei work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Upload or photograph your artwork, receive thoughtful critique with image references from historic master artists, and talk it through in a voice conversation with Marcel, the AI art tutor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is ArtSensei free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, ArtSensei is currently free to use. No credit card required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are my images private?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Your images are private and never used for training."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which artists does ArtSensei reference?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ArtSensei draws from a curated library of 113+ artwork examples from master artists including Rembrandt, Vermeer, Degas, Hokusai, Michelangelo, Van Gogh, Cassatt, Klimt, Durer, Seurat, Goya, and many more."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body onload="document.body.classList.add('loaded')">
     <!-- Sticky Header (appears after fold) -->
     <header class="sticky-header" id="sticky-header">
-        <div class="sticky-header-inner">
+        <nav class="sticky-header-inner" aria-label="Main navigation">
             <img src="Images/Logos/SVG/LOGO Black A.svg" alt="ArtSensei" class="sticky-logo">
             <a href="#waitlist" class="cta-button cta-button-sm">Try It Free</a>
-        </div>
+        </nav>
     </header>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -162,12 +264,14 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <img src="Images/Logos/SVG/LOGO White A.svg" alt="ArtSensei" class="footer-logo">
             <div class="grants">
-                <a href="https://elevenlabs.io/startup-grants" target="_blank" rel="noopener"><img src="https://eleven-public-cdn.elevenlabs.io/payloadcms/cy7rxce8uki-IIElevenLabsGrants%201.webp" alt="ElevenLabs Grants" class="grant-logo"></a>
+                <a href="https://elevenlabs.io/startup-grants" target="_blank" rel="noopener noreferrer"><img src="https://eleven-public-cdn.elevenlabs.io/payloadcms/cy7rxce8uki-IIElevenLabsGrants%201.webp" alt="ElevenLabs Grants" class="grant-logo"></a>
             </div>
             <p class="founder">Rob Colvin, Founder: <a href="mailto:rob@artsensei.ai">rob@artsensei.ai</a></p>
             <p class="copyright">All Rights Reserved: ArtSensei Inc. 2026</p>
