@@ -1,0 +1,892 @@
+/* Styrene B - Commercial Type */
+@font-face {
+    font-family: 'Styrene B';
+    src: url('fonts/WOFF2/StyreneB-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Styrene B';
+    src: url('fonts/WOFF2/StyreneB-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Styrene B';
+    src: url('fonts/WOFF2/StyreneB-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Styrene B';
+    src: url('fonts/WOFF2/StyreneB-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Minion Pro */
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('fonts/Minion/WOFF2/MinionPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('fonts/Minion/WOFF2/MinionPro-It.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('fonts/Minion/WOFF2/MinionPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Variables */
+:root {
+    --color-bg: #000000;
+    --color-text: #EBE7DB;
+    --color-text-muted: #EBE7DB;
+    --color-accent: #79a23b; /* rgb(121, 162, 59) - ArtSensei brand green */
+    --color-accent-hover: #8ab648;
+    --font-sans: 'Styrene B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-serif: 'Minion Pro', Georgia, 'Times New Roman', serif;
+    --container-width: 800px;
+    --spacing-section: 80px;
+}
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 16px;
+    right: 16px;
+    z-index: 100;
+    background: rgba(235, 231, 219, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 8px 20px;
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-100%);
+    transition: transform 0.35s ease;
+}
+
+.sticky-header.visible {
+    transform: translateY(0);
+}
+
+.sticky-header-inner {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sticky-logo {
+    width: 32px;
+    height: 32px;
+    opacity: 0.9;
+    margin-left: 8px;
+}
+
+.cta-button.cta-button-sm {
+    padding: 9px 27px;
+    font-size: 0.75rem;
+    will-change: transform;
+    letter-spacing: 0.06em;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    z-index: 1;
+    padding: 160px 24px 120px;
+}
+
+.hero .container {
+    text-align: center;
+}
+
+.grant-badge {
+    text-align: center;
+    padding: 12px 0 0;
+    background: #000;
+}
+
+.grant-badge-logo {
+    height: 18px;
+    filter: brightness(0) invert(1);
+    opacity: 0.5;
+}
+
+.grant-badge a:hover .grant-badge-logo {
+    opacity: 0.8;
+}
+
+.hero-statement {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 7vw, 5.5rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.hero-statement em {
+    font-style: italic;
+    background: linear-gradient(90deg, #E8B830, #D4882A, #C96B30, #D4A030, #E8B830);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: see-shift 6s ease-in-out infinite alternate;
+}
+
+@keyframes see-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.swatches {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 2rem;
+}
+
+.swatch {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.15s ease, outline 0.15s ease;
+    outline: 2px solid transparent;
+}
+
+.swatch:hover {
+    transform: scale(1.15);
+    outline: 2px solid #fff;
+}
+
+.hero-logo-spin {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 5rem;
+    opacity: 1;
+    will-change: transform;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #A8862A, #946020, #8A4E25, #5A7A2B, #967228, #A8862A);
+    background-size: 600% 100%;
+    animation: see-shift 3s ease-in-out infinite alternate;
+    color: #EBE7DB;
+    padding: 22px 64px;
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(138, 112, 64, 0.35);
+    color: #EBE7DB;
+}
+
+@keyframes cta-breathe {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Paper Tear Divider */
+.paper-tear {
+    width: 100%;
+    line-height: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.paper-tear img {
+    width: 100%;
+    display: block;
+}
+
+/* Content Sections (below the fold - light background) */
+section {
+    padding: var(--spacing-section) 24px;
+}
+
+.problem,
+.solution,
+.features,
+.audience,
+.how-it-works-section {
+    background-color: #EBE7DB;
+    color: #1a1a1a;
+    margin-top: -1px;
+    padding-top: 1px;
+}
+
+.marcel-image {
+    background-color: #EBE7DB;
+    text-align: center;
+    line-height: 0;
+    padding: 0 24px;
+}
+
+.marcel-image img {
+    max-width: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+/* Example Shots — dark mat (museum-proportioned) */
+.example-shots-band {
+    background-color: #1a1a1a;
+    /* Museum mat: equal top/sides, slightly heavier bottom */
+    padding: 5vw 6vw 5.75vw;
+    text-align: center;
+    line-height: 0;
+}
+
+.example-shots-band img {
+    width: 100%;
+    max-width: 960px;
+    display: inline-block;
+}
+
+/* Lightbox — mobile only */
+.lightbox {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .example-shots-band img {
+        cursor: zoom-in;
+    }
+
+    .lightbox.open {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 200;
+        background: rgba(0, 0, 0, 0.95);
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .lightbox-inner {
+        position: relative;
+    }
+
+    .lightbox img {
+        width: 200vw;
+        max-width: none;
+        display: block;
+    }
+
+    .lightbox-caption {
+        position: fixed;
+        bottom: 24px;
+        left: 0;
+        right: 0;
+        font-family: var(--font-sans);
+        font-style: italic;
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.85);
+        text-align: center;
+        padding: 0 24px;
+        margin: 0;
+        z-index: 210;
+    }
+
+    .lightbox-close {
+        position: fixed;
+        top: 12px;
+        right: 16px;
+        z-index: 210;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        border: none;
+        font-size: 2.25rem;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    padding: 56px 24px var(--spacing-section);
+}
+
+.problem {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+section.solution {
+    padding-bottom: 96px;
+}
+
+.problem blockquote {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 2rem auto 0;
+    padding: 0 24px;
+    border: none;
+    color: var(--color-accent);
+    text-align: center;
+}
+
+.problem blockquote cite {
+    display: block;
+    font-size: 0.75rem;
+    font-style: normal;
+    margin-top: 0.3rem;
+    color: #999;
+    text-align: center;
+}
+
+.problem h2,
+.solution h2,
+.features h2,
+.audience h2 {
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.problem h2,
+.solution h2 {
+}
+
+.problem p,
+.solution p,
+.audience p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #3a3a3a;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-wrap: pretty;
+}
+
+.problem p:last-child,
+.audience p:last-child {
+    margin-bottom: 0;
+}
+
+.solution p {
+    color: #3a3a3a;
+}
+
+/* How It Works */
+.how-it-works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-top: 3.5rem;
+}
+
+.step {
+    position: relative;
+}
+
+.step-number {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    padding: 0.1em 0;
+    background: linear-gradient(90deg, #E8B830, #D4882A, #C96B30, #79a23b, #D4A030, #E8B830);
+    background-size: 600% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: see-shift 3s ease-in-out infinite alternate;
+}
+
+.step h3 {
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+}
+
+.step p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #3a3a3a;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.privacy-note {
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 64px;
+    margin-top: 3rem;
+}
+
+.feature h3 {
+    color: #1a1a1a;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Audience */
+.audience {
+    text-align: center;
+    padding-top: 46px;
+    padding-bottom: 100px;
+}
+
+.audience p {
+    color: #3a3a3a;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+}
+
+.audience h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(90deg, #E8B830, #D4882A, #C96B30, #79a23b, #D4A030, #E8B830);
+    background-size: 600% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: see-shift 3s ease-in-out infinite alternate;
+    position: relative;
+}
+
+.audience h2::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #1a1a1a;
+    -webkit-text-fill-color: #1a1a1a;
+    transition: opacity 1.2s ease;
+    opacity: 1;
+}
+
+.audience h2.color-active::after {
+    opacity: 0;
+}
+
+.audience p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Filmstrip */
+.filmstrip {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: #000;
+    line-height: 0;
+}
+
+.filmstrip-track {
+    display: flex;
+    will-change: transform;
+}
+
+.filmstrip-item {
+    margin: 0;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.filmstrip-item img {
+    height: 175px;
+    width: auto;
+    display: block;
+}
+
+.filmstrip-item figcaption {
+    font-family: var(--font-sans);
+    font-size: 0.975rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.7);
+    background: #000;
+    padding: 8px 0;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Waitlist Section */
+.waitlist {
+    text-align: center;
+    padding: 120px 24px var(--spacing-section);
+}
+
+.waitlist h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+}
+
+.waitlist > .container > p:first-of-type {
+    font-family: var(--font-serif);
+    color: var(--color-text-muted);
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+}
+
+.waitlist-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.waitlist-form input[type="email"] {
+    width: 100%;
+    padding: 20px 24px;
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    background-color: #EBE7DB;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    color: #000000;
+    text-align: center;
+}
+
+.waitlist-form input[type="email"]::placeholder {
+    color: #999;
+}
+
+.waitlist-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.waitlist-form .cta-button {
+    width: 100%;
+}
+
+.form-note {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 48px 24px 64px;
+}
+
+.footer-logo {
+    width: 48px;
+    height: auto;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.grants {
+    margin-bottom: 2rem;
+}
+
+.grant-logo {
+    width: 180px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.grant-logo:hover {
+    opacity: 1;
+}
+
+.founder {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.founder a {
+    color: #666;
+}
+
+.copyright {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(70px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    animation: reveal-fallback 0s 2s forwards;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: none;
+}
+
+@keyframes reveal-fallback {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-break {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    :root {
+        --spacing-section: 48px;
+    }
+
+    .sticky-header {
+        padding: 8px 16px;
+    }
+
+    .cta-button.cta-button-sm {
+        padding: 10px 21px;
+        font-size: 0.7rem;
+    }
+
+    .problem h2,
+    .solution h2 {
+        text-align: left;
+    }
+
+    .problem p,
+    .solution p {
+        font-size: 1.05rem;
+        text-align: left;
+        padding: 0 8px;
+    }
+
+    .how-it-works {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .step {
+        text-align: center;
+    }
+
+    .step p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .step h3 {
+        font-size: 1.15rem;
+    }
+
+    .step-number {
+        font-size: 2.75rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .filmstrip-item img {
+        height: 110px;
+    }
+
+    .mobile-break {
+        display: block;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero {
+        padding-top: 80px;
+    }
+
+    /* Full bleed on mobile, keep top/bottom black slice */
+    .example-shots-band {
+        padding: 12px 0;
+    }
+
+    .example-shots-band img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .how-it-works-section {
+        padding-top: 36px;
+    }
+
+    section.solution {
+        padding-bottom: 48px;
+    }
+
+    .audience {
+        padding-top: 36px;
+        padding-bottom: 48px;
+    }
+
+    .audience {
+        text-align: left;
+    }
+
+    .audience h2 {
+        text-align: left;
+        line-height: 0.9;
+        font-size: clamp(3rem, 8vw, 5rem);
+    }
+
+    .audience p {
+        font-size: 1.15rem;
+        text-align: left;
+        padding: 0 8px;
+    }
+
+    .for-now {
+        font-size: 0.7em;
+        font-weight: 400;
+    }
+
+    .form-note {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+    }
+}

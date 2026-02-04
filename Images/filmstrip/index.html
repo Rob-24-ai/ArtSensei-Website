@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#000">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtSensei - You make the art. I help you see it.</title>
+    <meta name="description" content="Get substantive, art-historically grounded feedback on your paintings and drawings. Like having a knowledgeable studio visitor available anytime.">
+    <link rel="icon" type="image/svg+xml" href="Images/Logos/SVG/LOGO White A.svg">
+    <link rel="stylesheet" href="styles.css?v=6">
+    <style>body{opacity:0}body.loaded{opacity:1;transition:opacity .3s}</style>
+</head>
+<body onload="document.body.classList.add('loaded')">
+    <!-- Sticky Header (appears after fold) -->
+    <header class="sticky-header" id="sticky-header">
+        <div class="sticky-header-inner">
+            <img src="Images/Logos/SVG/LOGO Black A.svg" alt="ArtSensei" class="sticky-logo">
+            <a href="#waitlist" class="cta-button cta-button-sm">Try It Free</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-statement">You make the art.<br>We&nbsp;help&nbsp;you&nbsp;<em>see</em>&nbsp;it.</h1>
+<img src="Images/Logos/SVG/LOGO OffWhite A.svg" alt="ArtSensei" class="hero-logo-spin" id="spin-logo">
+        </div>
+    </section>
+
+    <!-- Torn Paper Divider -->
+    <div class="paper-tear">
+        <img src="Images/off-white-paper-tear-thin.jpg" alt="">
+    </div>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container reveal">
+            <h2>You know the need</h2>
+            <p>
+                You make work. You want real feedback—not "nice colors!" But thoughtful critique is hard to find. Maybe art school's behind you. Maybe you never went. Your community is thin and most people don't know how to really&nbsp;talk&nbsp;about&nbsp;visual&nbsp;art.
+            </p>
+        </div>
+        <!-- <blockquote class="reveal">
+            "Seeing is in itself a creative act which requires effort."
+            <cite>Henri Matisse</cite>
+        </blockquote> -->
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container reveal">
+            <h2>Eyes trained for you</h2>
+            <p>
+                ArtSensei sees your work the way serious artists do, because it's built by artists who studied or taught at SAIC, Yale, NYU, NYAA, RISD, and MICA.
+            </p>
+            <p>
+                Ask it anything: troubleshoot a painting, rethink a composition, and get unstuck. It remembers you, your tastes, and keeps you moving forward.
+            </p>
+        </div>
+    </section>
+
+    <!-- Example Shots — dark band -->
+    <div class="example-shots-band">
+        <img src="Images/ExampleShotsRow.jpg" alt="ArtSensei in action: upload your drawing, see art history references from Hokusai and Cassatt" id="shots-img">
+    </div>
+
+    <!-- Mobile lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <div class="lightbox-inner">
+            <img src="Images/ExampleShotsRow.jpg" alt="">
+            <p class="lightbox-caption">Need a visual? ArtSensei pulls from art history for you.</p>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="container reveal">
+            <div class="how-it-works">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3>Show your work</h3>
+                    <p>Snap a photo, point your camera, or upload an image.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3>Get thoughtful critique</h3>
+                    <p>Real feedback with image references from historic artists.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3>Talk it through</h3>
+                    <p>Ask for more. Push back. It's a conversation, not a report.</p>
+                </div>
+            </div>
+            <p class="privacy-note"><em>Your images are private and never used for training.</em></p>
+        </div>
+    </section>
+
+    <!-- Who It's For Section -->
+    <section class="audience">
+        <div class="container">
+            <h2 data-text="Yeah, it's free.">Yeah, it's free.</h2>
+            <p>
+                ArtSensei is new, and free for now. You use it. Tell us what's working and what isn't. Help&nbsp;us&nbsp;get&nbsp;this&nbsp;right.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filmstrip -->
+    <div class="filmstrip" id="filmstrip">
+        <div class="filmstrip-track" id="filmstrip-track">
+            <figure class="filmstrip-item"><img src="Images/filmstrip/01-corot.jpg" alt="Corot"><figcaption>Corot</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/02-rubens.gif" alt="Rubens"><figcaption>Rubens</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/03-kollwitz-proletariat.gif" alt="Kollwitz"><figcaption>Kollwitz</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/04-vermeer-glazing.gif" alt="Vermeer"><figcaption>Vermeer</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/05-klimt.gif" alt="Klimt"><figcaption>Klimt</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/06-af-klint.jpg" alt="Hilma af Klint"><figcaption>af Klint</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/07-gonzales.jpg" alt="Gonzales"><figcaption>Gonzales</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/08-moronobu.gif" alt="Moronobu"><figcaption>Moronobu</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/09-michelangelo.gif" alt="Michelangelo"><figcaption>Michelangelo</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/10-rembrandt.gif" alt="Rembrandt"><figcaption>Rembrandt</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/11-durer.gif" alt="Dürer"><figcaption>Dürer</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/12-kollwitz.gif" alt="Kollwitz"><figcaption>Kollwitz</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/13-degas.gif" alt="Degas"><figcaption>Degas</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/14-mondrian.jpg" alt="Mondrian"><figcaption>Mondrian</figcaption></figure>
+            <figure class="filmstrip-item"><img src="Images/filmstrip/15-goya.gif" alt="Goya"><figcaption>Goya</figcaption></figure>
+        </div>
+    </div>
+
+    <!-- Waitlist Section -->
+    <section class="waitlist" id="waitlist">
+        <div class="container">
+            <h2>Try it.</h2>
+            <p>It's free. No credit card. Give it a shot.</p>
+            <form class="waitlist-form" id="waitlist-form-bottom">
+                <input type="email" name="email" placeholder="you@example.com" required>
+                <button type="submit" class="cta-button">Let's Go.</button>
+            </form>
+            <p class="form-note">No spam. Just updates.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="Images/Logos/SVG/LOGO White A.svg" alt="ArtSensei" class="footer-logo">
+            <div class="grants">
+                <a href="https://elevenlabs.io/startup-grants" target="_blank" rel="noopener"><img src="https://eleven-public-cdn.elevenlabs.io/payloadcms/cy7rxce8uki-IIElevenLabsGrants%201.webp" alt="ElevenLabs Grants" class="grant-logo"></a>
+            </div>
+            <p class="founder">Rob Colvin, Founder: <a href="mailto:rob@artsensei.ai">rob@artsensei.ai</a></p>
+            <p class="copyright">All Rights Reserved: ArtSensei Inc. 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
