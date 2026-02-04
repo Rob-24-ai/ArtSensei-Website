@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+  <!-- Clip the interior to the lens circle -->
+  <defs>
+    <clipPath id="lens">
+      <circle cx="52" cy="52" r="32"/>
+    </clipPath>
+  </defs>
+
+  <!-- Brush texture inside the lens — varied directional marks suggesting paint surface -->
+  <g clip-path="url(#lens)" stroke="#555" opacity="0.7">
+    <!-- Diagonal strokes — like visible brush direction in an oil painting -->
+    <path d="M28 34 Q35 31, 44 33" stroke-width="3.5"/>
+    <path d="M32 42 Q42 38, 54 40" stroke-width="2.8"/>
+    <path d="M26 50 Q38 46, 48 49" stroke-width="4"/>
+    <path d="M36 57 Q46 53, 58 56" stroke-width="2.2"/>
+    <path d="M30 65 Q40 61, 52 63" stroke-width="3.2"/>
+
+    <!-- Cross-strokes — like a loaded brush changing direction -->
+    <path d="M48 30 Q50 40, 47 50" stroke-width="2.5"/>
+    <path d="M56 36 Q58 48, 55 58" stroke-width="3"/>
+    <path d="M64 32 Q63 44, 66 54" stroke-width="2"/>
+
+    <!-- A few shorter, thicker marks — impasto texture -->
+    <path d="M40 38 Q43 37, 46 38" stroke-width="4.5"/>
+    <path d="M58 48 Q62 46, 66 48" stroke-width="3.8"/>
+    <path d="M42 55 Q46 53, 50 55" stroke-width="4.2"/>
+    <path d="M68 42 Q70 46, 68 50" stroke-width="2.8"/>
+  </g>
+
+  <!-- Lens circle -->
+  <circle cx="52" cy="52" r="32" stroke="#333" stroke-width="3.5" fill="none"/>
+
+  <!-- Handle -->
+  <line x1="76" y1="76" x2="100" y2="100" stroke="#333" stroke-width="5"/>
+
+</svg>
