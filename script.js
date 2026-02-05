@@ -16,7 +16,7 @@
         'Check your light logic',
         'Get the mood you\'re looking for',
         'Solve compositional problems',
-        'Game out a studio visit',
+        'Game out a new approach',
         'Learn new techniques',
         'Understand your palette',
         'See color more clearly'
