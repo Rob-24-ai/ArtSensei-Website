@@ -472,6 +472,10 @@ section {
 
 .step-icon {
     margin-bottom: 0.5rem;
+    min-height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation: icon-color-shift 6s ease-in-out infinite alternate;
 }
 
@@ -490,7 +494,9 @@ section {
 .step-icon-combo {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0;
+    min-height: 96px;
     margin-left: 20px;
 }
 
