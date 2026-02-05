@@ -18,7 +18,7 @@
         'Solve compositional problems.',
         'Game out a new approach.',
         'Learn new techniques.',
-        'Understand your palette.',
+        'Refine your palette.',
         'See color more clearly.'
     ];
     var el = document.getElementById('use-case-line');
