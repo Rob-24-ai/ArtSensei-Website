@@ -7,7 +7,7 @@
         'Know when to leave a work alone',
         'Mix that one tricky color',
         'Figure out what\'s next',
-        'Balance warm and cool',
+        'Arrange your warms and cools',
         'See your work in new ways',
         'Fix muddy passages',
         'Think through your subject',
