@@ -1,14 +1,25 @@
 // Rotating use cases
 (function() {
     var phrases = [
-        'Troubleshoot a painting.',
-        'Get a studio visit.',
-        'Learn about glazing.',
-        'Rethink your composition.',
-        'Plan your next series.',
-        'Understand your palette.',
-        'Try targeted exercises.',
-        'Game out a new direction.'
+        'Spot what\'s off',
+        'Get a second pair of eyes',
+        'Sort out your values',
+        'Know when to leave a piece alone',
+        'Mix that one tricky color',
+        'Figure out what\'s next',
+        'Balance warm and cool',
+        'See your work in new ways',
+        'Fix muddy passages',
+        'Think through your subject',
+        'Get proportions right',
+        'Discover art-historical precedents',
+        'Find where you\'re overworking',
+        'Check your light logic',
+        'Get the mood you\'re looking for',
+        'Solve compositional problems',
+        'Game out a studio visit',
+        'Learn new techniques',
+        'Understand your palette'
     ];
     var el = document.getElementById('use-case-line');
     if (!el) return;
@@ -149,6 +160,13 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
 
     var slides = wrap.querySelectorAll('.slide');
     var dots = wrap.querySelectorAll('.dot');
+    var captionEl = document.getElementById('slideshow-caption');
+    var captions = [
+        'Show your work.',
+        'ArtSensei weighs in.',
+        'Your conversation continues.',
+        'See differently.'
+    ];
     var current = 0;
     var total = slides.length;
     var autoTimer;
@@ -160,6 +178,7 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
         current = (idx + total) % total;
         slides[current].classList.add('active');
         dots[current].classList.add('active');
+        if (captionEl) captionEl.textContent = captions[current];
     }
 
     function startAuto() {
