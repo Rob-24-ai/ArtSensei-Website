@@ -480,14 +480,18 @@ section {
     color: #1a1a1a;
 }
 
-/* Rotating use-case line - now lives inside slideshow on mobile */
-.use-case-line {
-    display: none; /* Hidden on desktop */
-}
-
-/* Desktop: hide the use-case line since it's mobile-only slideshow content */
+/* Rotating use-case line - below example shots on both desktop and mobile */
 .example-shots-band .use-case-line {
-    display: none;
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-align: center;
+    margin: 0;
+    padding: 32px 24px 48px;
+    min-height: 1.5em;
+    transition: opacity 0.5s ease;
 }
 
 .about {
@@ -1091,18 +1095,11 @@ footer {
         text-align: center;
     }
 
-    /* Rotating use-case line inside slideshow band */
-    .shots-slideshow .use-case-line {
-        display: block;
-        font-family: var(--font-sans);
+    /* Rotating use-case line - mobile overrides */
+    .example-shots-band .use-case-line {
         font-size: 1.4rem;
-        font-weight: 700;
-        font-style: normal;
         color: #1a1a1a;
-        margin: 0;
         padding: 40px 24px 48px;
-        text-align: center;
-        min-height: 1.5em;
         transition: opacity 0.5s ease;
     }
 
