@@ -340,7 +340,7 @@ section {
 /* Example Shots — full bleed with black bars */
 .example-shots-band {
     background-color: #1a1a1a;
-    padding: 5vw 6vw 5.5vw;
+    padding: 2.5vw 3vw;
     text-align: center;
     line-height: 0;
 }
