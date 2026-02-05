@@ -340,9 +340,40 @@ section {
 /* Example Shots — full bleed with black bars */
 .example-shots-band {
     background-color: #1a1a1a;
-    padding: 2.5vw 3vw;
+    padding: 1.5vw 2vw;
     text-align: center;
     line-height: 0;
+    position: relative;
+}
+
+.example-shots-band::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a1a1a, #E8B830, #D4882A, #C96B30, #79a23b, #D4A030, #1a1a1a);
+    background-size: 200% 100%;
+    animation: gradient-shift 6s ease-in-out infinite;
+}
+
+.example-shots-band::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a1a1a, #E8B830, #D4882A, #C96B30, #79a23b, #D4A030, #1a1a1a);
+    background-size: 200% 100%;
+    animation: gradient-shift 6s ease-in-out infinite reverse;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .example-shots-band .shots-desktop {
