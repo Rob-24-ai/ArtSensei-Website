@@ -643,14 +643,8 @@ section.solution {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 48px 24px;
+    padding: calc(18vh + 24px) 24px 48px;
     background-color: #EBE7DB;
-    opacity: 0.35;
-    transition: opacity 0.3s ease;
-}
-
-.testi-sticky.testi-active {
-    opacity: 1;
 }
 
 .testi-sticky blockquote {

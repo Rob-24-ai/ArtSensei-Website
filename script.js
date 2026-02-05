@@ -217,7 +217,7 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
 })();
 
 
-// Testimonial fade-in then fade-out based on scroll
+// Testimonial fade-out based on scroll through wrapper
 (function() {
     var testi = document.getElementById('testi-sticky');
     var wrap = document.getElementById('testi-audience-wrap');
@@ -227,29 +227,15 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
         var wrapRect = wrap.getBoundingClientRect();
         var wrapHeight = wrap.offsetHeight;
         var scrolled = -wrapRect.top;
-
-        // Fade IN when entering viewport (first 10% of scroll)
-        var fadeInEnd = wrapHeight * 0.1;
-        // Fade OUT after 30% of scroll through 50%
-        var fadeOutStart = wrapHeight * 0.3;
-        var fadeOutEnd = wrapHeight * 0.5;
-
-        if (scrolled < 0) {
-            // Before entering - semi-transparent
-            testi.classList.remove('testi-active');
-        } else if (scrolled < fadeInEnd) {
-            // Fading in
-            testi.classList.add('testi-active');
-        } else if (scrolled < fadeOutStart) {
-            // Fully visible
-            testi.classList.add('testi-active');
-            testi.style.opacity = '';
-        } else if (scrolled > fadeOutEnd) {
-            // Faded out
+        // Testimonial is visible for first 40% of wrapper scroll, then fades over next 20%
+        var fadeStart = wrapHeight * 0.2;
+        var fadeEnd = wrapHeight * 0.35;
+        if (scrolled < fadeStart) {
+            testi.style.opacity = 1;
+        } else if (scrolled > fadeEnd) {
             testi.style.opacity = 0;
         } else {
-            // Fading out
-            testi.style.opacity = 1 - (scrolled - fadeOutStart) / (fadeOutEnd - fadeOutStart);
+            testi.style.opacity = 1 - (scrolled - fadeStart) / (fadeEnd - fadeStart);
         }
     }, {passive: true});
 })();
