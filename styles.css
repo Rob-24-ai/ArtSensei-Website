@@ -476,7 +476,7 @@ section {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 700;
     line-height: 1.1;
-    margin: 0 0 48px;
+    margin: 0 0 32px;
     color: #1a1a1a;
 }
 
