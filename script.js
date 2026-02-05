@@ -1,25 +1,25 @@
 // Rotating use cases
 (function() {
     var phrases = [
-        'Spot what\'s off',
-        'Get a second pair of eyes',
-        'Sort out your values',
-        'Know when to leave a work alone',
-        'Mix that one tricky color',
-        'Figure out what\'s next',
-        'Arrange your warms and cools',
-        'See your work in new ways',
-        'Fix muddy passages',
-        'Think through your subject',
-        'Get proportions right',
-        'Discover art-historical precedents',
-        'Check your light logic',
-        'Get the mood you\'re looking for',
-        'Solve compositional problems',
-        'Game out a new approach',
-        'Learn new techniques',
-        'Understand your palette',
-        'See color more clearly'
+        'Spot what\'s off.',
+        'Get a second pair of eyes.',
+        'Sort out your values.',
+        'Know when to leave a work alone.',
+        'Mix that one tricky color.',
+        'Figure out what\'s next.',
+        'Arrange your warms and cools.',
+        'See your work in new ways.',
+        'Fix muddy passages.',
+        'Think through your subject.',
+        'Get proportions right.',
+        'Discover art-historical precedents.',
+        'Check your light logic.',
+        'Get the mood you\'re looking for.',
+        'Solve compositional problems.',
+        'Game out a new approach.',
+        'Learn new techniques.',
+        'Understand your palette.',
+        'See color more clearly.'
     ];
     var el = document.getElementById('use-case-line');
     if (!el) return;

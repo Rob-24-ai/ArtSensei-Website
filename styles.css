@@ -524,13 +524,13 @@ section {
 .use-cases {
     background-color: #EBE7DB;
     margin: 0;
-    padding: 40px 24px 48px;
+    padding: 60px 24px 60px;
     text-align: center;
 }
 
 .use-case-line {
     font-family: var(--font-sans);
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: #1a1a1a;
     margin: 0;
@@ -1145,7 +1145,7 @@ footer {
 
     /* Rotating use-case line - mobile overrides */
     .use-case-line {
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
 
     .how-it-works-section {
