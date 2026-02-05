@@ -18,7 +18,8 @@
         'Solve compositional problems',
         'Game out a studio visit',
         'Learn new techniques',
-        'Understand your palette'
+        'Understand your palette',
+        'See color more clearly'
     ];
     var el = document.getElementById('use-case-line');
     if (!el) return;
