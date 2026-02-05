@@ -27,7 +27,7 @@
     <meta name="twitter:image" content="https://artsensei.ai/Images/ExampleShotsRow.jpg">
 
     <link rel="icon" type="image/svg+xml" href="Images/Logos/SVG/LOGO White A.svg">
-    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles.css?v=10">
     <style>body{opacity:0}body.loaded{opacity:1;transition:opacity .3s}</style>
 
     <!-- Structured Data -->
@@ -147,44 +147,53 @@
         <img src="Images/off-white-paper-tear-thin.jpg" alt="Torn paper edge divider transitioning from black to off-white">
     </div>
 
-    <!-- Problem Section -->
-    <section class="problem">
+    <!-- Value Statement -->
+    <section class="value-statement">
         <div class="container reveal">
-            <h2>Good feedback is hard to find</h2>
-            <p>
-                You make work. You want real feedback—not "nice colors!" But thoughtful critique is hard to find. Maybe art school's behind you. Maybe you never went. Your community is thin and most people don't know how to really&nbsp;talk&nbsp;about&nbsp;visual&nbsp;art.
-            </p>
+            <p>ArtSensei gives clear feedback on your work.</p>
         </div>
-        <!-- <blockquote class="reveal">
-            "Seeing is in itself a creative act which requires effort."
-            <cite>Henri Matisse</cite>
-        </blockquote> -->
     </section>
 
-    <!-- Solution Section -->
-    <section class="solution">
+    <!-- About Section -->
+    <section class="about">
         <div class="container reveal">
-            <h2>Eyes trained for&nbsp;you</h2>
             <p>
-                ArtSensei sees your work the way professional artists do, because it's built by artists who studied or taught at SAIC, Yale, NYU, NYAA, RISD, and MICA.
+                Most people don't know how to talk about visual art. ArtSensei does — built by artists who studied or taught at SAIC, Yale, NYU, NYAA, RISD, and MICA.
             </p>
             <p>
-                Ask it anything: troubleshoot a painting, rethink a composition, explore a new direction. It remembers your work, your references, your taste.
+                Ask it anything: troubleshoot a painting, rethink a composition, consider a new direction. It remembers your work, your references, your taste.
             </p>
         </div>
     </section>
 
     <!-- Example Shots — dark band -->
     <div class="example-shots-band">
-        <img src="Images/ExampleShotsRow.jpg" alt="ArtSensei in action: upload your drawing, see art history references from Hokusai and Cassatt" id="shots-img" loading="lazy">
-    </div>
-
-    <!-- Mobile lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightbox-close">&times;</button>
-        <div class="lightbox-inner">
-            <img src="" alt="" id="lightbox-img">
-            <p class="lightbox-caption">Need a visual? ArtSensei pulls from art history for you.</p>
+        <img src="Images/ExampleShotsRow.jpg" alt="ArtSensei in action: upload your drawing, see art history references from Hokusai and Cassatt" class="shots-desktop" loading="lazy">
+        <div class="shots-slideshow" id="shots-slideshow">
+            <div class="slideshow-track">
+                <div class="slide active" data-slide="0">
+                    <img src="Images/Phone-Shots/slide-1-show-work.jpg" alt="Phone showing artwork upload in ArtSensei" loading="lazy">
+                    <p class="slide-caption">Show your work.</p>
+                </div>
+                <div class="slide" data-slide="1">
+                    <img src="Images/Phone-Shots/slide-2-response.jpg" alt="ArtSensei responding with a Hokusai reference" loading="lazy">
+                    <p class="slide-caption">ArtSensei weighs in.</p>
+                </div>
+                <div class="slide" data-slide="2">
+                    <img src="Images/Phone-Shots/slide-3-drawing.jpg" alt="Phone showing a figure drawing being critiqued" loading="lazy">
+                    <p class="slide-caption">The conversation continues.</p>
+                </div>
+                <div class="slide" data-slide="3">
+                    <img src="Images/Phone-Shots/slide-4-reference.jpg" alt="ArtSensei showing a Cassatt reference alongside your work" loading="lazy">
+                    <p class="slide-caption">See differently.</p>
+                </div>
+            </div>
+            <div class="slideshow-dots">
+                <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+                <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+            </div>
         </div>
     </div>
 

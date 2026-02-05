@@ -115,35 +115,60 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
     }, {passive: true});
 })();
 
-// Mobile lightbox for phone screenshots
+// Mobile slideshow for phone screenshots
 (function() {
     if (window.innerWidth > 768) return;
-    var img = document.getElementById('shots-img');
-    var lightbox = document.getElementById('lightbox');
-    if (!img || !lightbox) return;
+    var wrap = document.getElementById('shots-slideshow');
+    if (!wrap) return;
 
-    var lightboxImg = document.getElementById('lightbox-img');
+    var slides = wrap.querySelectorAll('.slide');
+    var dots = wrap.querySelectorAll('.dot');
+    var current = 0;
+    var total = slides.length;
+    var autoTimer;
+    var AUTO_DELAY = 3500;
 
-    img.addEventListener('click', function() {
-        if (lightboxImg && !lightboxImg.src.includes('ExampleShotsRow')) {
-            lightboxImg.src = 'Images/ExampleShotsRow.jpg';
-        }
-        lightbox.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    });
-
-    var closeBtn = document.getElementById('lightbox-close');
-
-    function closeLightbox() {
-        lightbox.classList.remove('open');
-        document.body.style.overflow = '';
+    function goTo(idx) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (idx + total) % total;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
     }
 
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) closeLightbox();
+    function startAuto() {
+        stopAuto();
+        autoTimer = setInterval(function() { goTo(current + 1); }, AUTO_DELAY);
+    }
+
+    function stopAuto() {
+        clearInterval(autoTimer);
+    }
+
+    // Dot navigation
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            goTo(parseInt(this.dataset.slide, 10));
+            startAuto();
+        });
     });
 
-    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    // Swipe support
+    var touchStartX = 0;
+    wrap.addEventListener('touchstart', function(e) {
+        touchStartX = e.touches[0].clientX;
+        stopAuto();
+    }, {passive: true});
+
+    wrap.addEventListener('touchend', function(e) {
+        var diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) {
+            goTo(diff > 0 ? current + 1 : current - 1);
+        }
+        startAuto();
+    }, {passive: true});
+
+    startAuto();
 })();
 
 
