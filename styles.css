@@ -382,6 +382,15 @@ section {
     display: block;
 }
 
+.example-shots-band .shots-caption {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: #ccc;
+    text-align: center;
+    margin: 20px 0 0;
+    line-height: 1.4;
+}
+
 .shots-slideshow {
     display: none;
 }
@@ -1044,6 +1053,10 @@ footer {
     }
 
     .example-shots-band .shots-desktop {
+        display: none;
+    }
+
+    .example-shots-band .shots-caption {
         display: none;
     }
 
