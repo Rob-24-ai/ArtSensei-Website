@@ -1,3 +1,29 @@
+// Rotating use cases
+(function() {
+    var phrases = [
+        'Troubleshoot a painting.',
+        'Get a studio visit.',
+        'Learn about glazing.',
+        'Rethink your composition.',
+        'Plan your next series.',
+        'Understand your palette.',
+        'Try targeted exercises.',
+        'Game out a new direction.'
+    ];
+    var el = document.getElementById('use-case-line');
+    if (!el) return;
+    var i = 0;
+    el.textContent = phrases[0];
+    setInterval(function() {
+        el.style.opacity = '0';
+        setTimeout(function() {
+            i = (i + 1) % phrases.length;
+            el.textContent = phrases[i];
+            el.style.opacity = '1';
+        }, 500);
+    }, 2500);
+})();
+
 // Swatch color picker
 document.querySelectorAll('.swatch').forEach(function(swatch) {
     swatch.addEventListener('click', function() {
