@@ -99,9 +99,10 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
     var current = 0;
     var total = cols.length;
     var ticking = false;
+    var clickLock = false; // Temporarily disable scroll after click
 
-    function setStep(index) {
-        if (index === current) return;
+    function setStep(index, force) {
+        if (index === current && !force) return;
         for (var i = 0; i < total; i++) {
             cols[i].classList.remove('step-col-active');
         }
@@ -109,7 +110,20 @@ document.querySelectorAll('.swatch').forEach(function(swatch) {
         current = index;
     }
 
+    // Desktop click handlers
+    cols.forEach(function(col, index) {
+        col.addEventListener('click', function() {
+            if (window.innerWidth > 768) {
+                setStep(index, true);
+                // Brief lock to prevent scroll from immediately overriding
+                clickLock = true;
+                setTimeout(function() { clickLock = false; }, 1000);
+            }
+        });
+    });
+
     window.addEventListener('scroll', function() {
+        if (clickLock) return; // Skip scroll updates briefly after click
         if (!ticking) {
             requestAnimationFrame(function() {
                 var rect = wrap.getBoundingClientRect();

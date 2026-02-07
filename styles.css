@@ -428,6 +428,14 @@ section {
     text-align: center;
     opacity: 0.15;
     transition: opacity 0.5s ease;
+    cursor: pointer;
+}
+
+/* Desktop hover hint for clickable steps */
+@media (min-width: 769px) {
+    .step-col:not(.step-col-active):hover {
+        opacity: 0.4;
+    }
 }
 
 .step-col-active {
